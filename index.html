@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl" class="dark">
+<html lang="ar" dir="rtl" class="dark scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>نكسس الذكي — منصة الأتمتة والذكاء الاصطناعي للفرق الحديثة</title>
+    <meta name="description" content="منصة متكاملة تجمع بين الأتمتة المتقدمة، تحليل البيانات الفوري، وتوليد المحتوى بجودة احترافية لمساعدتك على اتخاذ قرارات أسرع وتوفير مئات ساعات العمل.">
     <!-- Tailwind CSS v4 Play CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <!-- Google Fonts: Tajawal & Readex Pro -->
@@ -20,31 +21,41 @@
             overflow-x: hidden;
         }
         .glass-panel {
-            background: rgba(24, 24, 27, 0.7);
-            backdrop-filter: blur(16px);
+            background: rgba(24, 24, 27, 0.75);
+            backdrop-filter: blur(20px);
             border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+        .glass-panel-hover:hover {
+            border-color: rgba(16, 185, 129, 0.3);
+            background: rgba(24, 24, 27, 0.85);
         }
         .glow-effect {
             position: absolute;
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(16, 185, 129, 0.15) 0%, rgba(9, 9, 11, 0) 70%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(16, 185, 129, 0.12) 0%, rgba(9, 9, 11, 0) 70%);
             z-index: 0;
             pointer-events: none;
         }
+        .grid-pattern {
+            background-size: 40px 40px;
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        }
     </style>
 </head>
-<body class="bg-[#09090b] text-[#fafafa] min-h-screen selection:bg-emerald-500/30 selection:text-emerald-200">
+<body class="bg-[#09090b] text-[#fafafa] min-h-screen selection:bg-emerald-500/30 selection:text-emerald-200 grid-pattern">
 
-    <!-- Background Ambient Glow -->
-    <div class="glow-effect top-0 right-1/4 -translate-y-1/2"></div>
-    <div class="glow-effect bottom-1/3 left-1/4 translate-y-1/2 opacity-50"></div>
+    <!-- Ambient Glow Effects -->
+    <div class="glow-effect top-0 right-1/3 -translate-y-1/2"></div>
+    <div class="glow-effect bottom-1/4 left-1/4 translate-y-1/2 opacity-40"></div>
 
-    <!-- Navigation -->
-    <header class="sticky top-0 z-50 glass-panel border-b border-white/10">
+    <!-- Navigation Bar -->
+    <header class="sticky top-0 z-50 glass-panel border-b border-white/10 transition-all">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 font-bold text-xl">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500/20 to-teal-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 font-extrabold text-xl shadow-lg shadow-emerald-500/10">
                     N
                 </div>
                 <span class="text-xl font-bold tracking-tight text-white">نكسس <span class="text-emerald-400">الذكي</span></span>
@@ -53,6 +64,7 @@
             <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-zinc-400">
                 <a href="#features" class="hover:text-white transition-colors">المميزات</a>
                 <a href="#bento" class="hover:text-white transition-colors">القدرات</a>
+                <a href="#demo" class="hover:text-white transition-colors">المحاكي</a>
                 <a href="#pricing" class="hover:text-white transition-colors">الأسعار</a>
                 <a href="#faq" class="hover:text-white transition-colors">الأسئلة الشائعة</a>
             </nav>
@@ -69,13 +81,13 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="relative pt-20 pb-28 px-6 max-w-7xl mx-auto text-center">
-        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-panel text-xs font-medium text-emerald-400 mb-8 border border-emerald-500/20 shadow-inner">
+    <section class="relative pt-24 pb-32 px-6 max-w-7xl mx-auto text-center">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-panel text-xs font-medium text-emerald-400 mb-8 border border-emerald-500/25 shadow-inner">
             <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            الجيل الجديد من الذكاء الاصطناعي التوليدي والتحليلي
+            الجيل القادم من الذكاء الاصطناعي التوليدي والتحليلي للمؤسسات
         </div>
 
-        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white max-w-4xl mx-auto leading-[1.15] mb-6">
+        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white max-w-4xl mx-auto leading-[1.12] mb-6">
             ضاعف إنتاجية فريقك بمحرك ذكاء اصطناعي <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-cyan-400">فائق السرعة</span>
         </h1>
 
@@ -83,34 +95,34 @@
             منصة متكاملة تجمع بين الأتمتة المتقدمة، تحليل البيانات الفوري، وتوليد المحتوى بجودة احترافية لمساعدتك على اتخاذ قرارات أسرع وتوفير مئات ساعات العمل.
         </p>
 
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-20">
             <a href="#pricing" class="w-full sm:w-auto bg-emerald-500 hover:bg-emerald-400 text-zinc-950 font-bold px-8 py-4 rounded-xl text-base transition-all shadow-xl shadow-emerald-500/25 flex items-center justify-center gap-2 group">
                 ابدأ تجربتك المجانية
                 <i data-lucide="arrow-left" class="w-5 h-5 group-hover:-translate-x-1 transition-transform"></i>
             </a>
-            <a href="#features" class="w-full sm:w-auto glass-panel hover:bg-white/10 text-white font-medium px-8 py-4 rounded-xl text-base transition-all flex items-center justify-center gap-2 border border-white/10">
+            <a href="#demo" class="w-full sm:w-auto glass-panel glass-panel-hover text-white font-medium px-8 py-4 rounded-xl text-base transition-all flex items-center justify-center gap-2 border border-white/10">
                 شاهد العرض التوضيحي
                 <i data-lucide="play-circle" class="w-5 h-5 text-zinc-400"></i>
             </a>
         </div>
 
-        <!-- Social Proof Logos -->
+        <!-- Social Proof Marquee -->
         <div class="pt-8 border-t border-white/10">
-            <p class="text-xs uppercase tracking-widest text-zinc-500 mb-6 font-semibold">تثق بها نخبة الشركات والفرق التقنية في المنطقة</p>
-            <div class="flex flex-wrap items-center justify-center gap-8 md:gap-16 opacity-60 grayscale hover:grayscale-0 transition-all">
-                <div class="flex items-center gap-2 text-white font-bold text-lg"><i data-lucide="zap" class="text-emerald-400"></i> أريدوك</div>
-                <div class="flex items-center gap-2 text-white font-bold text-lg"><i data-lucide="shield" class="text-emerald-400"></i> سكيور تك</div>
-                <div class="flex items-center gap-2 text-white font-bold text-lg"><i data-lucide="cpu" class="text-emerald-400"></i> كودلاين</div>
-                <div class="flex items-center gap-2 text-white font-bold text-lg"><i data-lucide="globe" class="text-emerald-400"></i> ديجيتال ميديا</div>
+            <p class="text-xs uppercase tracking-widest text-zinc-500 mb-8 font-semibold">تثق بها نخبة الشركات والفرق التقنية في المنطقة</p>
+            <div class="flex flex-wrap items-center justify-center gap-10 md:gap-20 opacity-70">
+                <div class="flex items-center gap-2.5 text-zinc-300 font-bold text-lg"><i data-lucide="zap" class="text-emerald-400"></i> أريدوك</div>
+                <div class="flex items-center gap-2.5 text-zinc-300 font-bold text-lg"><i data-lucide="shield" class="text-emerald-400"></i> سكيور تك</div>
+                <div class="flex items-center gap-2.5 text-zinc-300 font-bold text-lg"><i data-lucide="cpu" class="text-emerald-400"></i> كودلاين</div>
+                <div class="flex items-center gap-2.5 text-zinc-300 font-bold text-lg"><i data-lucide="globe" class="text-emerald-400"></i> ديجيتال ميديا</div>
             </div>
         </div>
     </section>
 
     <!-- Bento Grid Section -->
-    <section id="bento" class="py-24 px-6 max-w-7xl mx-auto">
+    <section id="bento" class="py-28 px-6 max-w-7xl mx-auto">
         <div class="text-center max-w-2xl mx-auto mb-16">
             <h2 class="text-xs font-mono uppercase tracking-widest text-emerald-400 mb-3">قدرات فائقة</h2>
-            <h3 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">صُممت خصيصاً للسرعة والدقة</h3>
+            <h3 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">صُممت خصيصاً للسرعة والدقة المطلقة</h3>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -131,15 +143,17 @@
             </div>
 
             <!-- Bento Item 2 -->
-            <div class="glass-panel rounded-3xl p-8 relative overflow-hidden group border border-white/10 hover:border-emerald-500/30 transition-all">
-                <div class="w-12 h-12 rounded-2xl bg-teal-500/10 border border-teal-500/30 flex items-center justify-center text-teal-400 mb-6">
-                    <i data-lucide="shield-check" class="w-6 h-6"></i>
+            <div class="glass-panel rounded-3xl p-8 relative overflow-hidden group border border-white/10 hover:border-emerald-500/30 transition-all flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 rounded-2xl bg-teal-500/10 border border-teal-500/30 flex items-center justify-center text-teal-400 mb-6">
+                        <i data-lucide="shield-check" class="w-6 h-6"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3">أمان وحماية فائقة</h4>
+                    <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+                        بياناتك محمية بتشفير عالي المستوى مع الامتثال الكامل لمعايير الأمان العالمية لحماية خصوصية مؤسستك.
+                    </p>
                 </div>
-                <h4 class="text-xl font-bold text-white mb-3">أمان وحماية فائقة</h4>
-                <p class="text-zinc-400 text-sm leading-relaxed mb-6">
-                    بياناتك محمية بتشفير عالي المستوى مع الامتثال الكامل لمعايير الأمان العالمية لحماية خصوصية مؤسستك.
-                </p>
-                <div class="flex items-center gap-2 text-xs text-emerald-400 font-medium">
+                <div class="flex items-center gap-2 text-xs text-emerald-400 font-medium pt-4 border-t border-white/5">
                     <i data-lucide="check" class="w-4 h-4"></i> تشفير AES-256 متكامل
                 </div>
             </div>
@@ -168,14 +182,14 @@
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section id="features" class="py-24 px-6 max-w-7xl mx-auto border-t border-white/10">
+    <!-- Interactive Workflow Demo Section -->
+    <section id="demo" class="py-28 px-6 max-w-7xl mx-auto border-t border-white/10">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
                 <span class="text-xs font-mono uppercase tracking-widest text-emerald-400 mb-3 block">كفاءة تشغيلية عالية</span>
                 <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight mb-6">كل ما تحتاجه للارتقاء بعملك في مكان واحد</h2>
                 <p class="text-zinc-400 leading-relaxed mb-8">
-                    تم تصميم منصتنا لتندمج بسلاسة مع الأدوات التي تستخدمها يومياً، مما يتيح لك بناء سير عمل تلقائي بالكامل دون الحاجة لكتابة أكواد معقدة.
+                    تم تصميم منصتنا لتندمج بسلاسة مع الأجهزة والأدوات التي تستخدمها يومياً، مما يتيح لك بناء سير عمل تلقائي بالكامل دون الحاجة لكتابة أكواد معقدة.
                 </p>
 
                 <div class="space-y-4">
@@ -198,22 +212,12 @@
                             <p class="text-zinc-400 text-sm">نماذج لغوية مدربة خصيصاً لفهم السياق والثقافة العربية بدقة عالية.</p>
                         </div>
                     </div>
-
-                    <div class="flex items-start gap-4">
-                        <div class="w-8 h-8 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center shrink-0 mt-1">
-                            <i data-lucide="check" class="w-5 h-5"></i>
-                        </div>
-                        <div>
-                            <h4 class="text-white font-semibold mb-1">دعم فني على مدار الساعة</h4>
-                            <p class="text-zinc-400 text-sm">فريق مختص جاهز لمساعدتك في أي وقت لحل كافة استفساراتك.</p>
-                        </div>
-                    </div>
                 </div>
             </div>
 
-            <!-- Preview Card -->
+            <!-- Interactive Terminal Card -->
             <div class="glass-panel rounded-3xl p-8 border border-white/10 relative">
-                <div class="absolute -top-4 -right-4 bg-emerald-500 text-zinc-950 font-bold text-xs px-3 py-1 rounded-full shadow-lg">نشط الآن</div>
+                <div class="absolute -top-3 right-6 bg-emerald-500 text-zinc-950 font-bold text-xs px-3 py-1 rounded-full shadow-lg">نشط الآن</div>
                 <div class="flex items-center justify-between pb-6 border-b border-white/10 mb-6">
                     <div class="flex items-center gap-3">
                         <div class="w-3 h-3 rounded-full bg-emerald-500 animate-pulse"></div>
@@ -222,11 +226,11 @@
                     <span class="text-xs font-mono bg-zinc-800 text-zinc-400 px-2.5 py-1 rounded-md">جاهز</span>
                 </div>
                 <div class="space-y-4 font-mono text-sm">
-                    <div class="p-3.5 rounded-xl bg-zinc-900/80 border border-white/5 text-zinc-300">
+                    <div class="p-4 rounded-xl bg-zinc-900/90 border border-white/5 text-zinc-300">
                         <span class="text-emerald-400"># تهيئة نظام التحليل الذكي</span><br>
                         AI.initSession({ region: "mena", security: "strict" });
                     </div>
-                    <div class="p-3.5 rounded-xl bg-zinc-900/80 border border-white/5 text-zinc-300">
+                    <div class="p-4 rounded-xl bg-zinc-900/90 border border-white/5 text-zinc-300">
                         <span class="text-teal-400">&gt; جاري معالجة البيانات وتحسين الأداء...</span><br>
                         Optimization complete: <span class="text-emerald-400">+340% speed boost</span>
                     </div>
@@ -236,11 +240,11 @@
     </section>
 
     <!-- Pricing Section -->
-    <section id="pricing" class="py-24 px-6 max-w-7xl mx-auto border-t border-white/10">
+    <section id="pricing" class="py-28 px-6 max-w-7xl mx-auto border-t border-white/10">
         <div class="text-center max-w-2xl mx-auto mb-16">
             <span class="text-xs font-mono uppercase tracking-widest text-emerald-400 mb-3 block">خطط الأسعار</span>
             <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight mb-4">بخطط مرنة تناسب حجم عملك</h2>
-            <p class="text-zinc-400">اختر البطاقة المناسبة لاحتياجاتك، وابدأ فوراً بدون بطاقة ائتمان.</p>
+            <p class="text-zinc-400">اختر الباقة المناسبة لاحتياجاتك، وابدأ فوراً بدون بطاقة ائتمان.</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -253,19 +257,19 @@
                         <span class="text-4xl font-extrabold text-white">49</span>
                         <span class="text-zinc-400 text-sm">دولار / شهرياً</span>
                     </div>
-                    <ul class="space-y-3 text-sm text-zinc-300 mb-8">
-                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> 10,000 طلب شهرياً</li>
-                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> دعم النماذج الأساسية</li>
-                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> لوحة تحكم قياسية</li>
+                    <ul class="space-y-3.5 text-sm text-zinc-300 mb-8">
+                        <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> 10,000 طلب شهرياً</li>
+                        <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> دعم النماذج الأساسية</li>
+                        <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> لوحة تحكم قياسية</li>
                     </ul>
                 </div>
-                <a href="#" class="w-full bg-zinc-800 hover:bg-zinc-700 text-white font-semibold py-3 rounded-xl text-center text-sm transition-colors">
+                <a href="#" class="w-full bg-zinc-800 hover:bg-zinc-700 text-white font-semibold py-3.5 rounded-xl text-center text-sm transition-colors">
                     اختر الأساسية
                 </a>
             </div>
 
             <!-- Plan 2 (Featured) -->
-            <div class="glass-panel rounded-3xl p-8 border-2 border-emerald-500 relative flex flex-col justify-between bg-zinc-900/90 shadow-xl shadow-emerald-500/10">
+            <div class="glass-panel rounded-3xl p-8 border-2 border-emerald-500 relative flex flex-col justify-between bg-zinc-900/90 shadow-2xl shadow-emerald-500/10">
                 <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-emerald-500 text-zinc-950 text-xs font-bold px-3 py-1 rounded-full">الأكثر طلباً</div>
                 <div>
                     <h3 class="text-xl font-bold text-white mb-2">باقة المحترفين</h3>
@@ -274,14 +278,14 @@
                         <span class="text-4xl font-extrabold text-white">129</span>
                         <span class="text-zinc-400 text-sm">دولار / شهرياً</span>
                     </div>
-                    <ul class="space-y-3 text-sm text-zinc-300 mb-8">
-                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> طلبات غير محدودة</li>
-                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> نماذج متقدمة (GPT-4o)</li>
-                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> وكلاء ذكاء اصطناعي مخصصون</li>
-                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> دعم فني أولوية خاصة</li>
+                    <ul class="space-y-3.5 text-sm text-zinc-300 mb-8">
+                        <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> طلبات غير محدودة</li>
+                        <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> نماذج متقدمة (GPT-4o)</li>
+                        <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> وكلاء ذكاء اصطناعي مخصصون</li>
+                        <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> دعم فني أولوية خاصة</li>
                     </ul>
                 </div>
-                <a href="#" class="w-full bg-emerald-500 hover:bg-emerald-400 text-zinc-950 font-bold py-3 rounded-xl text-center text-sm transition-all shadow-lg shadow-emerald-500/20">
+                <a href="#" class="w-full bg-emerald-500 hover:bg-emerald-400 text-zinc-950 font-bold py-3.5 rounded-xl text-center text-sm transition-all shadow-lg shadow-emerald-500/20">
                     ابدأ الآن
                 </a>
             </div>
@@ -294,13 +298,13 @@
                     <div class="flex items-baseline gap-1 mb-8">
                         <span class="text-4xl font-extrabold text-white">مخصص</span>
                     </div>
-                    <ul class="space-y-3 text-sm text-zinc-300 mb-8">
-                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> نماذج خاصة ومخصصة (Fine-tuned)</li>
-                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> حماية أمنية وسحابية خاصة</li>
-                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> مدير حساب مخصص</li>
+                    <ul class="space-y-3.5 text-sm text-zinc-300 mb-8">
+                        <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> نماذج خاصة ومخصصة (Fine-tuned)</li>
+                        <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> حماية أمنية وسحابية خاصة</li>
+                        <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> مدير حساب مخصص</li>
                     </ul>
                 </div>
-                <a href="#" class="w-full bg-zinc-800 hover:bg-zinc-700 text-white font-semibold py-3 rounded-xl text-center text-sm transition-colors">
+                <a href="#" class="w-full bg-zinc-800 hover:bg-zinc-700 text-white font-semibold py-3.5 rounded-xl text-center text-sm transition-colors">
                     تواصل معنا
                 </a>
             </div>
@@ -308,26 +312,35 @@
     </section>
 
     <!-- FAQ Section -->
-    <section id="faq" class="py-24 px-6 max-w-4xl mx-auto border-t border-white/10">
+    <section id="faq" class="py-28 px-6 max-w-4xl mx-auto border-t border-white/10">
         <div class="text-center mb-16">
             <span class="text-xs font-mono uppercase tracking-widest text-emerald-400 mb-3 block">الأسئلة الشائعة</span>
             <h2 class="text-3xl font-bold text-white tracking-tight">كل ما تحتاج معرفته عن المنصة</h2>
         </div>
 
-        <div class="space-y-4">
-            <div class="glass-panel rounded-2xl p-6 border border-white/10">
-                <h4 class="text-white font-semibold mb-2">كيف يمكنني البدء في استخدام المنصة؟</h4>
-                <p class="text-zinc-400 text-sm leading-relaxed">يمكنك إنشاء حساب مجاني خلال ثوانٍ معدودة والبدء في استكشاف الميزات والنموذج دون الحاجة لإدخال بطاقة ائتمان.</p>
+        <div class="space-y-4" id="faq-accordion">
+            <div class="glass-panel rounded-2xl p-6 border border-white/10 cursor-pointer faq-item">
+                <div class="flex items-center justify-between font-semibold text-white">
+                    <span>كيف يمكنني البدء في استخدام المنصة؟</span>
+                    <i data-lucide="chevron-down" class="w-5 h-5 text-zinc-400 transition-transform"></i>
+                </div>
+                <p class="text-zinc-400 text-sm leading-relaxed mt-3 hidden">يمكنك إنشاء حساب مجاني خلال ثوانٍ معدودة والبدء في استكشاف الميزات والنموذج دون الحاجة لإدخال بطاقة ائتمان.</p>
             </div>
 
-            <div class="glass-panel rounded-2xl p-6 border border-white/10">
-                <h4 class="text-white font-semibold mb-2">هل تدعم المنصة اللغة العربية بشكل كامل؟</h4>
-                <p class="text-zinc-400 text-sm leading-relaxed">نعم، تم تدريب النماذج والوكلاء لدينا خصيصاً لفهم اللهجات والسياق العربي بدقة عالية واحترافية.</p>
+            <div class="glass-panel rounded-2xl p-6 border border-white/10 cursor-pointer faq-item">
+                <div class="flex items-center justify-between font-semibold text-white">
+                    <span>هل تدعم المنصة اللغة العربية بشكل كامل؟</span>
+                    <i data-lucide="chevron-down" class="w-5 h-5 text-zinc-400 transition-transform"></i>
+                </div>
+                <p class="text-zinc-400 text-sm leading-relaxed mt-3 hidden">نعم، تم تدريب النماذج والوكلاء لدينا خصيصاً لفهم اللهجات والسياق العربي بدقة عالية واحترافية.</p>
             </div>
 
-            <div class="glass-panel rounded-2xl p-6 border border-white/10">
-                <h4 class="text-white font-semibold mb-2">هل يمكنني تغيير الباقة لاحقاً؟</h4>
-                <p class="text-zinc-400 text-sm leading-relaxed">بالتأكيد، يمكنك ترقية أو تخفيض باقتك في أي وقت من لوحة التحكم بكل سهولة.</p>
+            <div class="glass-panel rounded-2xl p-6 border border-white/10 cursor-pointer faq-item">
+                <div class="flex items-center justify-between font-semibold text-white">
+                    <span>هل يمكنني تغيير الباقة لاحقاً؟</span>
+                    <i data-lucide="chevron-down" class="w-5 h-5 text-zinc-400 transition-transform"></i>
+                </div>
+                <p class="text-zinc-400 text-sm leading-relaxed mt-3 hidden">بالتأكيد، يمكنك ترقية أو تخفيض باقتك في أي وقت من لوحة التحكم بكل سهولة.</p>
             </div>
         </div>
     </section>
@@ -348,9 +361,30 @@
         </div>
     </footer>
 
-    <!-- Initialize Lucide Icons -->
+    <!-- Scripts -->
     <script>
         lucide.createIcons();
+
+        // FAQ Accordion Toggle
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.addEventListener('click', () => {
+                const p = item.querySelector('p');
+                const icon = item.querySelector('i');
+                const isOpen = !p.classList.contains('hidden');
+                
+                // Close all
+                document.querySelectorAll('.faq-item p').forEach(el => el.classList.add('hidden'));
+                document.querySelectorAll('.faq-item i').forEach(el => el.style.transform = 'rotate(0deg)');
+
+                if (isOpen) {
+                    p.classList.add('hidden');
+                    icon.style.transform = 'rotate(0deg)';
+                } else {
+                    p.classList.remove('hidden');
+                    icon.style.transform = 'rotate(180deg)';
+                }
+            });
+        });
     </script>
 </body>
 </html>
